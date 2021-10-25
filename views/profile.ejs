@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+      <h1 class="display-1 text-center">Welcome to the Pizza Spot</h1>
+      <div>
+    
+        <div class="text-center">
+          
+          <a href="/logout" class="btn btn-dark btn-sm m-2">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-center col-sm-4">Place Order</h2>
+    </div>
+
+    <section class="d-flex justify-content-around col-sm-4">
+
+      <form action="/order" method="post">
+      <select name="dough">
+        <option value="#">Select type</option>
+        <option value="pan">Pan Pizza</option>
+        <option value="thin">Thin Pizza</option>
+        <option value="chicago style">Chicago Pizza</option>
+      </select>
+      <select name="topping">
+        <option value="#">Select topping</option>
+        <option value="pepperoni">Pepperoni</option>
+        <option value="cheese">Cheese</option>
+        <option value="hawaii">Hawaii</option>
+        <option value="everything">Everything</option>
+      </select>
+      <select name="size">
+        <option value="#">Select size</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+        <option value="x-large">X-Large</option>
+      </select>
+      <button type="submit" class="btn btn-sm btn-success">Order</button>
+    </form>
+    </section>
+
+    <section class="container col-sm-4">
+     <p> Hello, <%=user.local.email%> Your order for a <%=pizza[pizza.length - 1].dough%>, <%=pizza[pizza.length - 1].topping%>, <%=pizza[pizza.length - 1].size%> Pizza has been processed.</p>
+    </section>
+
+      
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
